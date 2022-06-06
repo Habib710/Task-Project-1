@@ -11,7 +11,7 @@ const Home = () => {
   const [products, setproducts] = useState([])
   const [mycolors, setmycolors] = useState({ id: 771, title: 'Black' })
   const [mysizes, setmysizes] = useState({ id: 200000338, title: '43' })
-  const [myskus, setmyskus] = useState([])
+
 
   useEffect(() => {
     fetch(
@@ -32,7 +32,7 @@ const Home = () => {
       (sku) => sku.props[0] === selectedcolor && sku.props[1] === selectedsize,
     )
 
-    setmyskus(selectedVariant)
+  
 
    await setnewprice(selectedVariant[0]?.price)
   //  title: `Color :${mycolors?.title}`,
