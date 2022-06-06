@@ -35,8 +35,7 @@ const Home = () => {
   
 
    await setnewprice(selectedVariant[0]?.price)
-  //  title: `Color :${mycolors?.title}`,
-    // text: `Size : ${mysizes?.title} `,
+ 
     Swal.fire({
       icon: 'success',
       title:`Color : ${mycolors?.title}, Price : ${selectedVariant[0]?.price?.discounted} $` ,
@@ -51,7 +50,7 @@ const Home = () => {
         {/* Gallery div ........... */}
 
         <div className="col-lg-5 col-sm-12">
-          <div className=" lg-py-5 mygallery-css text-center">
+          <div className=" py-5 mygallery-css text-center">
             {products?.gallery?.map((pic) => (
               <Gallery key={pic.id} picture={pic}></Gallery>
             ))}

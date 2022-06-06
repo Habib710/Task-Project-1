@@ -6,7 +6,7 @@ const Color = ({data,mychoose}) => {
     
     return (
         <div className="color-css" >
-            <img onClick={()=>mychoose({id,title})} width='150px' src={image} alt="" />
+            <img onClick={()=>mychoose({id,title})} width='120px' src={image} alt="" />
             
         </div>
     );
